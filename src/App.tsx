@@ -3,10 +3,12 @@ import Title from "./components/Title";
 
 function App() {
     return (
-        <div>
-            <Title title="my Title" />
+        <>
+            <Title>
+                <div>123</div>
+            </Title>
             <Description />
-        </div>
+        </>
     );
 }
 
