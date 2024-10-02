@@ -1,15 +1,17 @@
-import { Description } from "./components/Description";
-import Title from "./components/Title";
+import { StudentTable } from "./components/StudentTable";
+
+
 
 function App() {
-    return (
+    
+
+    return(
         <>
-            <Title>
-                <div>123</div>
-            </Title>
-            <Description />
+        <StudentTable />
         </>
-    );
+    )
+    
 }
 
 export default App;
+
