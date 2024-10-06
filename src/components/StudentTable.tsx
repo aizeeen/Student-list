@@ -29,7 +29,7 @@ export const StudentTable = (props: props) => {
                 {props.students.map((item) => {
                     return (
                 <TableRow>
-                    <TableCell>{item.name}</TableCell>
+                    <TableCell>{item.fullName}</TableCell>
                     <TableCell>{item.age}</TableCell>
                     <TableCell>{item.email}</TableCell>
                     <TableCell>{item.class}</TableCell>
