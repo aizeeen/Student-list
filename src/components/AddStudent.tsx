@@ -1,6 +1,7 @@
 import { Button, Paper, TextField } from "@mui/material"
 import { ChangeEvent, Dispatch, SetStateAction, useEffect, useState } from "react"
 import { Student } from "../utils/data" 
+import { createStudent } from "../api/students";
 
 
 interface Props{
@@ -19,8 +20,9 @@ export const AddStudent = ({ setStudents, students }: Props) => {
     }
 
 
-    const handleSubmit = () => {
-        setStudents([...students, formData])
+    const handleSubmit = async () => {
+        const data = await createStudent(formData)
+        setStudents([...students, data])
         setFormData(initialState)
     }
     useEffect(() => {
