@@ -21,9 +21,16 @@ export const AddStudent = ({ setStudents, students }: Props) => {
 
 
     const handleSubmit = async () => {
-        const data = await createStudent(formData)
+        try {
+            const data = await createStudent(formData)
         setStudents([...students, data])
         setFormData(initialState)
+
+        } catch (err) {
+            alert(err)
+
+        }
+        
     }
     useEffect(() => {
         console.log("Firing useEffect")

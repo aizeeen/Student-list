@@ -14,7 +14,7 @@ function App() {
    
 
     useEffect(() => {  
-        fetchStudents().then((data) => setStudents(data));
+        fetchStudents().then((data) => setStudents(data)).catch((err) => alert(err));
      }, []);
     
 
